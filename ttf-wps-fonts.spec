@@ -17,7 +17,7 @@ BuildRequires:  unzip
 Font files for WPS Office, an office suite whose interface closely mirrors Microsoft Office.
 
 %prep
-%setup -c -n ttf-wps-fonts-%{commit}
+%setup -q -c -T -n ttf-wps-fonts-%{commit}
 unzip -q %{SOURCE0}
 rm -f *.sh *.md
 
