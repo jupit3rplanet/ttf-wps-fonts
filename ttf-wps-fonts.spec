@@ -1,14 +1,12 @@
-%global commit 8c980c24289cb08e03f72915970ce1bd6767e45a
-
 Name:           ttf-wps-fonts
 Version:        0.1
-Release:        2
+Release:        1
 Summary:        Linux office suite with similar appearance to MS Office - font files
 Group:          Graphics
 # See wps-office.spec for the license background; this repo ships no separate license file of its own.
 License:        Custom (EULA)
 URL:            https://www.wps.com/
-Source0:        https://github.com/dv-anomaly/ttf-wps-fonts/archive/%{commit}.zip#/%{name}-%{commit}.zip
+Source0:        https://github.com/dv-anomaly/ttf-wps-fonts/archive/refs/heads/master.zip
 
 BuildArch:      noarch
 BuildRequires:  unzip
@@ -17,7 +15,7 @@ BuildRequires:  unzip
 Font files for WPS Office, an office suite whose interface closely mirrors Microsoft Office.
 
 %prep
-%setup -q -n %{name}-%{commit}
+%setup -q -n %{name}-master
 rm -f *.sh *.md
 
 %build
